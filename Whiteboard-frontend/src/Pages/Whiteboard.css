@@ -1,0 +1,354 @@
+/* General container styles */
+.container {
+  font-family: "Arial", sans-serif;
+  color: white;
+  background-color: rgba(27, 27, 27, 1);
+}
+
+.top-bar {
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(83, 83, 83, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.whiteboard-body-container {
+  display: flex;
+  height: calc(100vh - 4rem);
+  width: 100%;
+  background-color: rgba(27, 27, 27, 1);
+  overflow-x: hidden;
+}
+
+/* Responsive right bar styles */
+@media (max-width: 1024px) {
+  .right-bar {
+    width: 25%;
+    flex-direction: column;
+  }
+
+  .rightbar-col {
+    width: 100%;
+  }
+
+  .elements {
+    width: 100%;
+    height: auto;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Right bar styles */
+.right-bar {
+  width: 12rem;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Each column in the right bar */
+.rightbar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  width: 5rem;
+  padding: 0.5rem;
+  background-color: rgba(60, 60, 60, 0.8);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.elements:hover {
+  background-color: rgba(80, 80, 80, 0.8);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.name span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Main board container */
+.white-board-container {
+  flex-grow: 1;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgba(34, 34, 34, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Update Box and Input Styles */
+.update-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.update-box button {
+  padding: 0.5rem 1rem;
+  background-color: rgba(83, 83, 83, 0.8);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.update-box button:hover {
+  background-color: rgba(120, 120, 120, 0.9);
+}
+
+.inp-fontSize,
+.inp-color {
+  padding: 0.2rem;
+  border-radius: 4px;
+  border: 1px solid rgba(83, 83, 83, 0.8);
+  background-color: rgba(44, 44, 44, 1);
+  color: white;
+}
+
+.inp-fontSize {
+  width: 2.5rem;
+  text-align: center;
+}
+
+/* Color Picker Styles */
+.color-picker-div {
+  width: 100%;
+  height: 2rem;
+  background-color: rgba(60, 60, 60, 1);
+  border-radius: 4px;
+  border: 1px solid rgba(83, 83, 83, 0.8);
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.color-picker-div:hover {
+  background-color: rgba(80, 80, 80, 1);
+}
+
+.color-picker-popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  margin-top: 0.5rem;
+}
+
+.inp-color {
+  height: 2rem;
+  width: 2.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+button:focus {
+  outline: none;
+  transform: scale(1.03);
+}
+
+.whiteboard {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  margin-left: 0.5rem;
+}
+
+.element-color {
+  margin-top: 15px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.styled-textarea {
+  margin-top: 10px;
+  width: 90%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease;
+}
+
+.styled-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.styled-button {
+  padding: 10px 20px;
+  background-color: orangered;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.styled-button:hover {
+  transform: scale(1.05);
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: rgba(27, 27, 27, 1);
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn {
+  padding: 0.5rem 1rem;
+  background-color: rgba(83, 83, 83, 0.8);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.txt-area {
+  height: 2rem;
+  width: 20rem;
+}
+
+.fnt {
+  width: 20px;
+}
+
+.active {
+  background-color: #f86f00;
+}
+
+.icon2 {
+  margin-top: 10px;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .right-bar {
+    width: none;
+    flex-direction: column;
+  }
+  .rightbar-col {
+    width: 100%;
+  }
+  .elements {
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+  }
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .right-bar {
+    width: 6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .txt-area {
+    height: 3rem;
+    width: 10rem;
+  }
+  .right-bar {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .right-bar {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .txt-area {
+    height: 3rem;
+    width: 10rem;
+  }
+  .update-box button {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  .add-btn {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.6rem;
+  }
+  .inputBox {
+    margin-top: 10px;
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+}
